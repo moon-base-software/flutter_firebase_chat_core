@@ -21,6 +21,7 @@ class FirebaseChatCore {
     null,
     'rooms',
     'users',
+    null,
   );
 
   /// Current logged in user in Firebase. Does not update automatically.
@@ -35,6 +36,7 @@ class FirebaseChatCore {
   FirebaseFirestore getFirebaseFirestore() => config.firebaseAppName != null
       ? FirebaseFirestore.instanceFor(
           app: Firebase.app(config.firebaseAppName!),
+          databaseId: config.databaseId,
         )
       : FirebaseFirestore.instance;
 

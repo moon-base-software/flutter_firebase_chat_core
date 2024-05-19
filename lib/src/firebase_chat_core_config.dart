@@ -11,6 +11,7 @@ class FirebaseChatCoreConfig {
     this.firebaseAppName,
     this.roomsCollectionName,
     this.usersCollectionName,
+    this.databaseId,
   );
 
   /// Property to set custom firebase app name.
@@ -21,4 +22,7 @@ class FirebaseChatCoreConfig {
 
   /// Property to set users collection name.
   final String usersCollectionName;
+
+  /// Property to use non-default, named Firestore database.
+  final String? databaseId;
 }
